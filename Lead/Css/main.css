@@ -1,0 +1,42 @@
+﻿
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: AkzidGroStdReg;
+    /*-ms-touch-action: none;*/
+}
+
+/*General*/
+@font-face {
+    font-family: 'AkzidGroStdLig';
+    src: url(../Fonts/AkzidGroStdLig.otf);
+}
+
+@font-face {
+    font-family: 'AkzidGroStdMed';
+    src: url('../Fonts/AkzidGroStdMed.otf');
+}
+
+@font-face {
+    font-family: 'AkzidGroStdBol';
+    src: url('../Fonts/AkzidGroStdBol.otf');
+}
+
+@font-face {
+    font-family: 'AkzidGroStdReg';
+    src: url('../Fonts/AkzidGroStdReg.otf');
+}
+
+@font-face {
+    font-family: 'AkzidGroStdSup';
+    src: url('../Fonts/AkzidGroStdSup.otf');
+}

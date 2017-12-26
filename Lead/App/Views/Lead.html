@@ -1,0 +1,245 @@
+﻿<script type="text/javascript">
+    $(document).ready(function () {
+        $("#Cno").keypress(function (e) {
+            //if the letter is not digit then display error and don't type anything
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                return false;
+            }
+        });
+    });
+</script>
+<section>
+    <!--Header-->
+    <div class="row">
+        <nav class="navbar navbar-default navbar-fixed-top nav_Lead" role="navigation">
+            <div style="position: absolute; left: 15px; top: 12px;">
+                <img ng-show="BackImg" src="Images/Back_arrow_white.png" style="width:20px;" alt="No Image"
+                     ng-click="ToggleBack(toggleObject);" />
+            </div>
+            <div class="text_header">Lead</div>
+
+            <div class="pull-right" style="position: absolute; right: 15px; top: 12px;">
+                <img src="Images/Overall_tiles_White.png" style="width:20px" ng-click="menu();" />
+            </div>
+        </nav>
+    </div>
+
+    <!--Buttons-->
+    <div class="row">
+        <div class="pad0 col-xs-12">
+            <div class="panel panel-primary" style="border:none; background-color:#fff; margin-bottom: 5px; border-radius:0px; box-shadow: none;">
+                <div class="panel-heading" style="border:none; background-color:#fff; padding: 0px 15px 0px 15px;">
+                    <div class="row">
+                        <!-- Button Search -->
+                        <div class="pad0 col-xs-3 mg_top2">
+                            <div class="button" role="presentation"
+                                 ng-class="{'activebutton' : toggleObject == 1}" ng-click="ToggleBack(2);">SØG KUNDE</div>
+                        </div>
+                        <!-- Button Contact -->
+                        <div class="pad0 col-xs-3 mg_top2">
+                            <div class="button" role="presentation"
+                                 ng-class="{'activebutton' : toggleObject == 2}">KONTAKT INFO</div>
+                        </div>
+                        <!-- Button Describe -->
+                        <div class="pad0 col-xs-3 mg_top2">
+                            <div class="button" role="presentation"
+                                 ng-class="{'activebutton' : toggleObject == 3}">BESKRIV</div>
+                        </div>
+                        <!-- Button Recipt -->
+                        <div class="pad0 col-xs-3 mg_top2">
+                            <div class="button" role="presentation"
+                                 ng-class="{'activebutton' : toggleObject == 4}">KVITTERING</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="pad0 col-xs-12 tab-content">
+            <!--Search Content-->
+            <div class="tab-pane" ng-class="{'active' : toggleObject == 1}">
+                <input ng-model="searchText" id="search" class="searchinput searchinput_holder" ng-change="updateSearchText();"
+                       placeholder="Søg kunde" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Søg kunde'" />
+                <div class="container">
+                    <hr style="margin:0px 0px 10px 0px; border-top: solid #cec9c9 1px;" />
+                    <button class="btn btn-lg btn-block btn_search"
+                            role="button" type="submit" ng-click="SearchFunc(searchText);"
+                            ng-keyup="$event.keyCode == 13 && SearchFunc(searchText);">
+                        SØG
+                    </button>
+                </div>
+                <div id="listdiv" style="position: fixed; overflow: auto; height: 70%; width: 100%;-webkit-overflow-scrolling: touch;">
+                    <ul id="UlList" class="list-group">
+                        <!-- <a href="#/LeadContact" role="button">-->
+                        <li data-ng-repeat="x in accounts" class="list-group-item"
+                            style="border-radius: 0px; border-bottom: 0; border-right: 0; border-left: 0;"
+                            ng-click="checklistitem(2,x);">
+                            <span id="accountno" class="emp_title">{{x.VATIdentificationNumber}}</span>
+                            <span class="badge">
+                                <img class="pull-right imgarrow" src="Images/ic_arrow_right.png" alt="Image Not Found" />
+                            </span>
+                            <br />
+                            <p class="txtcontactbold">
+                                {{ x.CustomerId }} - {{x.Name}}
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <!--<div ng-show="NoRec" class="text-center" style="color: grey;font-size: 20px;margin-top: 50%;">Ingen rekord fundet</div>-->
+            </div>
+
+            <!--Contact Content-->
+            <div class="tab-pane" ng-class="{active : toggleObject == 2}">
+                <div id="wrapper" style="background-color:#D7242A; margin:10px 15px 0px 15px;
+                     padding-top:5px;padding-bottom:5px;">
+                    <div style="width: 65%; ">
+                        <p id="accountno" class="txtcontact txtcontactnormal" style="color: white;">Kunde</p>
+                        <p class="txtcontactbolder" style="font-weight: bolder; color: #fff;">
+                            {{lstitem.CustomerId}} - {{lstitem.Name}}
+                        </p>
+                    </div>
+                    <div style="width: 20%; text-align: right; ">
+                        <p id="accountno" class="txtcontact txtcontactnormal" style="color: white;float:left;">Kundenummer</p>
+                        <p class="txtcontactbolder" style="font-family: AkzidGroStdLig; color: #fff;float:left;">
+                            {{lstitem.CustomerId}}
+                        </p>
+                    </div>
+                </div>
+                <div id="wrapper" style="background-color:#D7242A; margin-left:15px; margin-right:15px;">
+                    <div style="width: 85%;">
+                        <p id="accountno" class="txtcontact txtcontactnormal" style="color: white;">Atea Account Manager</p>
+                        <p class="txtcontactbolder" style="font-family: AkzidGroStdLig; color: #fff;">
+                            {{ManagerInitial == null ? "NaN": ManagerInitial}}
+                        </p>
+                    </div>
+                </div>
+                <hr class="leadline" />
+                <form ng-submit="" novalidate="novalidate" name="form">
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <p class="txtcontact txtcontactnormal" style="color: black;">Kunde kontaktperson</p>
+                            <input id="name" class="inputleft_Placeholder leadinput "
+                                   placeholder="Indtast navn"
+                                   ng-model="LeadData.ContactName"
+                                   required="required"
+                                   required-err-type="ContactPerson"
+                                   type="text"
+                                   ng-change="updateNameText();" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <p class="txtcontact txtcontactnormal" style="color: black; margin-top: 10px;">Telefonnummer</p>
+                            <input id="Cno" class="inputleft_Placeholder leadinput"
+                                   placeholder="Indtast telefonnummer"
+                                   ng-model="LeadData.ContactPhone"
+                                   required="required"
+                                   required-err-type="ContactNumber"
+                                   type="tel"
+                                   min="8"
+                                   max="20"
+                                   ng-minlength="LessNo"
+                                   ng-maxlength="GreaterNo" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <p class="txtcontact txtcontactnormal" style="color: black; margin-top: 10px;">Email</p>
+                            <input class="inputleft_Placeholder leadinput "
+                                   placeholder="Indtast evt. Email"
+                                   ng-model="LeadData.ContactEmail"
+                                   required="required"
+                                   ng-pattern="/^[_A-Za-z0-9\+\-]+(\.[_A-Za-z0-9\+\-]+)*@[A-Za-z0-9-\+\-]+(\.[A-Za-z0-9-\+\-]+)*(\.[A-Za-z]{2,4})$/"
+                                   ng-pattern-err-type="badEmail"
+                                   required-err-type="ContactEmail"
+                                   type="email" />
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin:0px;text-align:center;">
+                        <div class="dropdown col-xs-12">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"
+                                    style="margin:15px 0px 0px 0px;width: 100%;background: #D7242A;border-color: #D7242A; border-radius: 0px;">
+                                {{businessAtea.text}}
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" style="margin:0px 15px 0px 15px;left: 0;right: 0; height: 130px; overflow: auto;">
+                                <li ng-repeat="x in businessAteaData" style="text-align:center;" ng-click="onBusinessClick(x)">
+                                    <p style="margin-top:5px;margin-bottom:5px;">{{x.text}}</p>
+                                    <hr style="margin:0;" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <label>Ja tak, send permission mail til kunden</label>
+                            <input type="checkbox" name="Permission" ng-model="LeadData.Permission"
+                                   class="checkbox"
+                                   ng-disabled="(!LeadData.ContactName || !LeadData.ContactPhone || !LeadData.ContactEmail)"
+                                   ng-click="checkBoxedClick();" />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input type="submit" class="btn btn_info" value="NÆSTE" ng-click="ContactinfoValidate();" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!--Describe Content-->
+            <div class="tab-pane" ng-class="{active : toggleObject == 3}">
+                <div style="margin:20px 0px 0px 0px;">
+                    <form ng-submit="" novalidate="novalidate" name="form1">
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <p class="txtcontact txtcontactnormal" style="color: black; padding-left: 3px;">Emne</p>
+                                <input id="title" class="inputleft_Placeholder leadtitle "
+                                       placeholder="Titel"
+                                       ng-model="LeadData.Subject"
+                                       required="required"
+                                       required-err-type="Title"
+                                       ng-change="updateTitleText();" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <textarea id="desc" class="inputleft_Placeholder leadtext "
+                                          rows="2"
+                                          placeholder="Beskrivelse af Lead"
+                                          maxlength="750"
+                                          ng-model="LeadData.Description"
+                                          required="required"
+                                          required-err-type="Desc"
+                                          ng-change="updateDescText();" />
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <input type="submit" class="btn btn_lead" value="OPRET LEAD" ng-click="ContactinfoSubmit();" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!--Recipt Content-->
+            <div class="tab-pane" ng-class="{active : toggleObject == 4}">
+                <div style="margin:20px 0px 0px 0px;">
+                    <p class="leadrecipt font16">TAK!</p>
+                    <p class="leadrecipt font16">Vi har modtaget dit Lead.</p>
+                    <p class="leadrecipt font12">Du vil få besked om dit Lead er omsat til salg.</p>
+                    <div class="form-group" style="padding-right: 15px; padding-left: 15px;">
+                        <input type="button" class="btn" style="width:100%;height:40px; background-color: #D7242A;font-weight:bold;color:#fff;" value="OK" ng-click="ToggleBack(2);" />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>F:\Deployment\LeadApp</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App/App.js">
+      <publishTime>09/09/2016 14:02:31</publishTime>
+    </File>
+    <File Include="App/Controller/LeadController.js">
+      <publishTime>08/29/2016 15:30:52</publishTime>
+    </File>
+    <File Include="App/Service/authInterceptorService.js">
+      <publishTime>08/29/2016 12:11:35</publishTime>
+    </File>
+    <File Include="App/Service/authService.js">
+      <publishTime>08/29/2016 12:11:35</publishTime>
+    </File>
+    <File Include="App/Service/tokensManagerService.js">
+      <publishTime>08/29/2016 12:11:35</publishTime>
+    </File>
+    <File Include="App/Views/Lead.html">
+      <publishTime>09/08/2016 11:29:34</publishTime>
+    </File>
+    <File Include="bin/Lead.dll">
+      <publishTime>09/09/2016 14:03:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>12/07/2015 19:04:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>06/06/2016 15:40:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>06/06/2016 15:40:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>06/06/2016 10:45:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>06/06/2016 15:40:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>06/06/2016 15:40:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>06/06/2016 10:42:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>06/15/2015 02:06:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="Css/bootstrap.min.css">
+      <publishTime>08/29/2016 12:24:27</publishTime>
+    </File>
+    <File Include="Css/bootstrap.min.css.map">
+      <publishTime>08/29/2016 12:24:27</publishTime>
+    </File>
+    <File Include="Css/Lead.css">
+      <publishTime>09/08/2016 11:29:26</publishTime>
+    </File>
+    <File Include="Css/Main.css">
+      <publishTime>08/29/2016 13:09:24</publishTime>
+    </File>
+    <File Include="Default.html">
+      <publishTime>08/29/2016 12:57:04</publishTime>
+    </File>
+    <File Include="Fonts/AkzidGroStdBol.otf">
+      <publishTime>08/29/2016 12:12:52</publishTime>
+    </File>
+    <File Include="Fonts/AkzidGroStdBolIta.otf">
+      <publishTime>08/29/2016 12:12:52</publishTime>
+    </File>
+    <File Include="Fonts/AkzidGroStdIta.otf">
+      <publishTime>08/29/2016 12:12:52</publishTime>
+    </File>
+    <File Include="Fonts/AkzidGroStdLig.otf">
+      <publishTime>08/29/2016 12:12:52</publishTime>
+    </File>
+    <File Include="Fonts/AkzidGroStdLigIta.otf">
+      <publishTime>08/29/2016 12:12:52</publishTime>
+    </File>
+    <File Include="Fonts/AkzidGroStdMed.otf">
+      <publishTime>08/29/2016 12:12:52</publishTime>
+    </File>
+    <File Include="Fonts/AkzidGroStdMedIta.otf">
+      <publishTime>08/29/2016 12:12:52</publishTime>
+    </File>
+    <File Include="Fonts/AkzidGroStdReg.otf">
+      <publishTime>08/29/2016 12:12:52</publishTime>
+    </File>
+    <File Include="Fonts/AkzidGroStdSup.otf">
+      <publishTime>08/29/2016 12:12:52</publishTime>
+    </File>
+    <File Include="Fonts/AkzidGroStdSupIta.otf">
+      <publishTime>08/29/2016 12:12:52</publishTime>
+    </File>
+    <File Include="Fonts/glyphicons-halflings-regular.eot">
+      <publishTime>08/29/2016 12:12:52</publishTime>
+    </File>
+    <File Include="Fonts/glyphicons-halflings-regular.svg">
+      <publishTime>08/29/2016 12:12:52</publishTime>
+    </File>
+    <File Include="Fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>08/29/2016 12:12:52</publishTime>
+    </File>
+    <File Include="Fonts/glyphicons-halflings-regular.woff">
+      <publishTime>08/29/2016 12:12:52</publishTime>
+    </File>
+    <File Include="Fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>08/29/2016 12:12:52</publishTime>
+    </File>
+    <File Include="Images/arrow-left_green.png">
+      <publishTime>08/29/2016 12:26:45</publishTime>
+    </File>
+    <File Include="Images/arrowLeft.png">
+      <publishTime>08/29/2016 12:26:45</publishTime>
+    </File>
+    <File Include="Images/arrowRight_grey.png">
+      <publishTime>08/29/2016 12:26:45</publishTime>
+    </File>
+    <File Include="Images/arrow_left_grey.png">
+      <publishTime>08/29/2016 12:26:45</publishTime>
+    </File>
+    <File Include="Images/atealoader.gif">
+      <publishTime>08/29/2016 12:26:45</publishTime>
+    </File>
+    <File Include="Images/atealogo.png">
+      <publishTime>08/29/2016 12:26:45</publishTime>
+    </File>
+    <File Include="Images/ateaLogo_original.png">
+      <publishTime>08/29/2016 12:26:45</publishTime>
+    </File>
+    <File Include="Images/Back_arrow_white.png">
+      <publishTime>08/29/2016 12:26:45</publishTime>
+    </File>
+    <File Include="Images/checkbox_green.png">
+      <publishTime>08/29/2016 12:26:45</publishTime>
+    </File>
+    <File Include="Images/contactPerson_Grey.png">
+      <publishTime>08/29/2016 12:26:45</publishTime>
+    </File>
+    <File Include="Images/favicon.ico">
+      <publishTime>08/29/2016 12:26:45</publishTime>
+    </File>
+    <File Include="Images/ic_arrow_right.png">
+      <publishTime>09/07/2016 11:38:16</publishTime>
+    </File>
+    <File Include="Images/In_app_tiles_white.png">
+      <publishTime>08/29/2016 12:26:45</publishTime>
+    </File>
+    <File Include="Images/loader.gif">
+      <publishTime>08/29/2016 12:26:45</publishTime>
+    </File>
+    <File Include="Images/lock-unlock-512.png">
+      <publishTime>08/29/2016 12:26:45</publishTime>
+    </File>
+    <File Include="Images/logout2_grey.png">
+      <publishTime>08/29/2016 12:26:45</publishTime>
+    </File>
+    <File Include="Images/Menu_thumbles-5121.png">
+      <publishTime>08/29/2016 12:26:45</publishTime>
+    </File>
+    <File Include="Images/Overall_tiles_White.png">
+      <publishTime>08/29/2016 12:26:45</publishTime>
+    </File>
+    <File Include="Images/Password_grey.png">
+      <publishTime>08/29/2016 12:26:45</publishTime>
+    </File>
+    <File Include="Images/ToggleOff.png">
+      <publishTime>08/29/2016 12:26:45</publishTime>
+    </File>
+    <File Include="Images/ToggleOn.png">
+      <publishTime>08/29/2016 12:26:45</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>08/29/2016 12:06:51</publishTime>
+    </File>
+    <File Include="Script/aes.js">
+      <publishTime>08/29/2016 12:22:19</publishTime>
+    </File>
+    <File Include="Script/angular-animate.min.js">
+      <publishTime>08/29/2016 12:19:36</publishTime>
+    </File>
+    <File Include="Script/angular-animate.min.js.map">
+      <publishTime>08/29/2016 12:19:37</publishTime>
+    </File>
+    <File Include="Script/angular-aria.min.js">
+      <publishTime>08/29/2016 12:19:37</publishTime>
+    </File>
+    <File Include="Script/angular-aria.min.js.map">
+      <publishTime>08/29/2016 12:19:37</publishTime>
+    </File>
+    <File Include="Script/angular-loader.min.js">
+      <publishTime>08/29/2016 12:19:37</publishTime>
+    </File>
+    <File Include="Script/angular-loader.min.js.map">
+      <publishTime>08/29/2016 12:19:37</publishTime>
+    </File>
+    <File Include="Script/angular-local-storage.min.js">
+      <publishTime>08/29/2016 12:35:04</publishTime>
+    </File>
+    <File Include="Script/angular-resource.min.js">
+      <publishTime>08/29/2016 12:19:37</publishTime>
+    </File>
+    <File Include="Script/angular-resource.min.js.map">
+      <publishTime>08/29/2016 12:19:37</publishTime>
+    </File>
+    <File Include="Script/angular-route.min.js">
+      <publishTime>08/29/2016 12:19:37</publishTime>
+    </File>
+    <File Include="Script/angular-route.min.js.map">
+      <publishTime>08/29/2016 12:19:36</publishTime>
+    </File>
+    <File Include="Script/angular.min.js">
+      <publishTime>08/29/2016 12:19:36</publishTime>
+    </File>
+    <File Include="Script/angular.min.js.map">
+      <publishTime>08/29/2016 12:19:36</publishTime>
+    </File>
+    <File Include="Script/bootstrap-dialog.js">
+      <publishTime>08/29/2016 12:21:54</publishTime>
+    </File>
+    <File Include="Script/bootstrap.min.js">
+      <publishTime>08/29/2016 12:24:03</publishTime>
+    </File>
+    <File Include="Script/jcs-auto-validate.min.js">
+      <publishTime>08/29/2016 12:23:28</publishTime>
+    </File>
+    <File Include="Script/jquery.min.js">
+      <publishTime>08/29/2016 12:22:32</publishTime>
+    </File>
+    <File Include="Script/md5.js">
+      <publishTime>08/29/2016 12:22:19</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/09/2016 14:03:02</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
